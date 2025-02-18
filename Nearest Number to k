@@ -1,0 +1,29 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int k,i;
+    int a[10];
+    int n;
+    int j;
+    cin>>k;
+    for( i=0;i<k;i++)
+    {
+        cin>>a[i];
+    }
+    cin>>n;
+    j=a[0];
+    for(i=1;i<k;i++)
+    {
+        if(abs(n-j)>abs(n-a[i]))
+        {
+            j=a[i];
+        }
+    }
+    cout<<j;
+}
