@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+      int n;
+    cin>>n;
+    int o=0,z=0;
+    while(n!=0)
+    {
+        if(n%2==1)
+        {
+          o++;  
+        }
+        else{z++;}
+        n=n/2;
+    }
+    cout<<z<<"\n";
+    cout<<o;
+    return 0;
+}
