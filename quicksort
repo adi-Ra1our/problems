@@ -1,0 +1,14 @@
+def quicksort(arr):
+    if len(arr)<=1:
+        return arr
+    p=arr[len(arr)//2]
+    l=[x for x in arr if x<p]
+    mid=[x for x in arr if x==p]
+    r=[x for x in arr if x>p]
+    return quicksort(l)+mid+quicksort(r)
+
+n=int(input())
+arr=list(map(int,input().split()))
+s_arr= quicksort(arr)
+for i in s_arr:
+    print(i,end=" ")
